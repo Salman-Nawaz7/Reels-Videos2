@@ -217,3 +217,41 @@ video {
 }
 
 /* ... other styles remain the same ... */
+/* Make reels responsive on smaller screens */
+@media (max-width: 768px) {
+  .wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+  }
+
+  .reel-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 0; /* optional: remove border radius for full-screen effect */
+  }
+
+  .reel-overlay {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .side-actions {
+    right: 16px;
+    bottom: 140px;
+    gap: 0.75rem;
+  }
+
+  .side-actions .action-btn {
+    font-size: 1.1rem;
+    padding: 0.4rem;
+  }
+
+  .follow-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
