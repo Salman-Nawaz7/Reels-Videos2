@@ -12,9 +12,14 @@ export class ReelsService {
   // }
 
   getReels(offset = 0, limit = 5) {
+  // return this.http.get<{ videosUrls: { Videourl: string }[] }>(
+  //   `http://localhost:3000/reels/list?offset=${offset}&limit=${limit}`
+  // );
+
   return this.http.get<{ videosUrls: { Videourl: string }[] }>(
-    `http://localhost:3000/reels/list?offset=${offset}&limit=${limit}`
-  );
+  `https://reels-backend-production-9ac1.up.railway.app/reels/list?offset=${offset}&limit=${limit}`
+);
+
 }
 
 }
